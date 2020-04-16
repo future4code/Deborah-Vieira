@@ -1,20 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-body {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-}
-
-/* Menu bg */
 .menubg {
   background-color: #3868a6;
   padding: 10px;
@@ -36,7 +19,7 @@ body {
 }
 
 .menu-logo a {
-  font-size: 1.6em;
+  font-size: 1.9em;
 }
 
 .menu-nav ul {
@@ -54,30 +37,53 @@ body {
   color: #c6b8d9;
 }
 
-/* MENSAGEM BOAS VINDAS */
-.mensagem-inicio {
+/* MENSAGEM INICIAL */
+h2 {
   max-width: 960px;
   margin: 0 auto;
   text-align: center;
   padding-top: 60px;
+  padding-bottom: 20px;
   color: #3868a6;
+  font-size: 2em;
 }
-.mensagem-inicio:hover {
+
+h2:hover {
   color: grey;
 }
 
-.mensagem-loja {
+.texto-link {
   max-width: 960px;
   margin: 0 auto;
   text-align: center;
   padding-top: 30px;
-  color: #3868a6;
-  font-size: 2em;
-  cursor: pointer;
+  padding-bottom: 30px;
+  color: grey;
+  font-size: 1.25em;
 }
 
-.mensagem-loja a:hover {
+.texto-link a:hover {
+  color: #3868a6;
+}
+
+/* LISTA COLABORADORES */
+
+.lista-colaboradores {
+  background-color: #c6b8d9;
+  text-align: center;
+  padding: 10px;
+}
+
+.colaboradores b {
+  color: #3868a6;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.colaboradores-info {
   color: grey;
+  font-size: 16px;
+  padding-top: 5px;
 }
 
 /* FOOTER */
@@ -86,7 +92,7 @@ body {
   padding: 5px;
   display: flex;
   flex-wrap: wrap;
-  position: absolute;
+  position: relative;
   bottom: 0px;
   width: 100%;
 }
