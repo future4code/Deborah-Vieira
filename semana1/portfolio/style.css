@@ -1,0 +1,221 @@
+/* Resentando Estilos Padrão */
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* Menu */
+.menu-bg {
+  background-color: #2180a6;
+  padding: 15px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 980px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.menu a {
+  color: #fff;
+  padding: 10px;
+}
+
+.menu a:hover {
+  color: #f27f3d;
+}
+
+.menu ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Apresentação */
+
+.container {
+  background-color: #000;
+}
+.apresentacao {
+  display: flex;
+  align-items: center;
+  max-width: 980px;
+  margin: 0 auto;
+  background-color: #000;
+  padding-top: 20px;
+  margin-top: 40px;
+}
+
+.img img {
+  width: 300px;
+  height: 300px;
+  padding-top: 60px;
+  margin-right: 20px;
+}
+
+.descricao h2 {
+  color: #f27f3d;
+
+  padding-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.descricao p {
+  color: #f27f3d;
+  font-size: 18px;
+  text-align: justify;
+}
+
+/* Experiencia */
+
+.experiencia {
+  margin-top: 60px;
+  background-color: #2180a6;
+}
+
+.experiencia h2 {
+  padding-top: 20px;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.lista-experiencia ul {
+  margin-top: 60px;
+  font-size: 1.25em;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 980px;
+  text-align: center;
+  margin: auto;
+}
+
+.lista-experiencia li {
+  flex: 1 1 300px;
+  margin: 20px 10px;
+  align-items: center;
+  margin-top: 40px;
+  padding-bottom: 20px;
+}
+
+.lista-experiencia li:hover {
+  color: #f27f3d;
+}
+
+/* Projeto */
+
+.projeto {
+  margin-top: 60px;
+}
+
+.projeto h2 {
+  color: #f27f3d;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.projeto ul {
+  margin-top: 60px;
+  font-size: 1.25em;
+  color: #2180a6;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 980px;
+  text-align: center;
+  margin: auto;
+}
+
+.projeto li {
+  flex: 1 1 300px;
+  margin: 20px 10px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.projeto li:hover {
+  color: #f27f3d;
+}
+
+/* CHÁ */
+
+.habilidade {
+  margin-top: 60px;
+  background-color: #2180a6;
+}
+
+.habilidade h2 {
+  padding-top: 20px;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.habilidade ul {
+  margin-top: 60px;
+  font-size: 1.25em;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 980px;
+  text-align: center;
+  margin: auto;
+}
+
+.habilidade li {
+  flex: 1 1 300px;
+  margin: 20px 10px;
+  align-items: center;
+  margin-top: 40px;
+  padding-bottom: 20px;
+}
+
+.habilidade li:hover {
+  color: #f27f3d;
+}
+
+/* Formulário */
+
+.formulário {
+  padding-top: 60px;
+}
+
+.formulário h2 {
+  padding-top: 20px;
+  color: #f27f3d;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+form {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+form label {
+  display: block;
+  color: #2180a6;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 4px;
+}
+
+form input {
+  display: block;
+  width: 50%;
+  border: 4px solid #7c7c7c;
+  background: none;
+  padding: 7px 10px;
+  font-size: 14px;
+}
