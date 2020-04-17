@@ -3,30 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/produto.css" />
     <title>Psiu - Produtos</title>
   </head>
   <body>
+    <!-- MENU -->
+    <div class="menubg">
+      <div class="menu">
+        <div class="menu-logo">
+          <a href="#">Psiu Informática</a>
+        </div>
+        <nav class="menu-nav">
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/estoque.html">Produtos</a></li>
+            <li><a href="/funcionarios.html">Quem Somos</a></li>
+            <li><a href="/produto.html">Carrinho</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
     <h2>Preencha o formulário abaixo e faça seu pedido! :)</h2>
 
     <form action="#">
-      <label for="nome">Nome do Produto</label><br />
-      <input type="text " size="40" name="nome" id="nome" /><br />
+      <div class="nome">
+        <label for="nome">Nome do Produto</label><br />
+        <input class="label" type="text " size="40" name="nome" id="nome" />
+      </div>
+      <br />
       <br />
 
-      <label for="descrição">Descrição</label><br />
-      <input type="text" size="40" name="descrição" id="descrição" /> <br />
+      <div class="descricao">
+        <label for="descricao">Descrição</label><br />
+        <textarea
+          class="label"
+          name="descricao"
+          id=""
+          cols="30"
+          rows="10"
+        ></textarea>
+      </div>
       <br />
-
-      <label for="preco">Preço</label><br />
-      <input type="text " size="15" name="preco" id="preco" /> <br />
       <br />
-
-      <label for="quantidade">Quantidade</label> <br />
-      <input type="text " size="5" name="quantidade" id="quantidade" />
+      <div class="preco">
+        <label for="preco">Preço</label><br />
+        <input class="label" type="text " size="15" name="preco" id="preco" />
+      </div>
+      <br />
+      <br />
+      <div class="quantidade">
+        <label for="quantidade">Quantidade</label> <br />
+        <input
+          class="label"
+          type="text "
+          size="5"
+          name="quantidade"
+          id="quantidade"
+        />
+      </div>
 
       <button>Enviar</button>
     </form>
 
-    <h3><a href="/sistema-loja/index.html">Voltar ao menu inicial</a></h3>
+    <h3 class="texto-link">
+      <a href="index.html">Voltar ao menu inicial</a>
+    </h3>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="contato">
+        <h3>Fale Conosco</h3>
+        <p>(61) 3344-8574</p>
+        <p>(61) 9 8621-2292</p>
+        <p>CNPJ: 07.897.813/0001-10</p>
+      </div>
+
+      <div class="redes">
+        <h3>Nossas Redes</h3>
+        <p>Instagram</p>
+        <p>Facebook</p>
+        <p>LinkedIn</p>
+      </div>
+    </footer>
   </body>
 </html>

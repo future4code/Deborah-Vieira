@@ -3,18 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/estoque.css" />
+
     <title>Produtos</title>
   </head>
+
+  <!-- MENU -->
+  <div class="menubg">
+    <div class="menu">
+      <div class="menu-logo">
+        <a href="/index.html">Psiu Informática</a>
+      </div>
+      <nav class="menu-nav">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/estoque.html">Produtos</a></li>
+          <li><a href="/funcionarios.html">Quem Somos</a></li>
+          <li><a href="/produto.html">Carrinho</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
   <body>
-    <h2>Conheça os nossos produtos!</h2>
+    <h2>Confira nossas ofertas!</h2>
     <br />
 
-    <h3>
+    <h3 class="texto-link">
       Encontrou o que precisa?
-      <a href="/sistema-loja/produto.html">Clique Aqui </a> e faça seu pedido!
+      <a href="/produto.html">Clique Aqui </a> e faça seu pedido!
     </h3>
 
-    <table border="1">
+    <table border="1" id="tabela">
       <tr>
         <th>Item</th>
         <th>Descrição</th>
@@ -22,51 +42,45 @@
         <th>Quantidade</th>
       </tr>
 
-      <tr>
-        <td><img src="/sistema-loja/img/headset.jpg" alt="Headset" /></td>
+      <tr id="tr-tabela">
+        <td><img src="img/headset.jpg" alt="Headset" /></td>
         <td>Headset Vermelho com microfone integrado</td>
-        <td>R$180,00</td>
+        <td>R$ 180,00</td>
         <td>
           15
         </td>
       </tr>
 
-      <tr>
+      <tr id="tr-tabela">
         <td>
-          <img src="/sistema-loja/img/mochila.jpg" alt="Mochila para Notbook" />
+          <img src="img/mochila.jpg" alt="Mochila para Notbook" />
         </td>
         <td>Mochila para Notbook 14 - impermeavel</td>
-        <td>R$400,00</td>
+        <td>R$ 400,00</td>
         <td>05</td>
       </tr>
 
-      <tr>
+      <tr id="tr-tabela">
         <td>
-          <img
-            src="/sistema-loja/img/mousepad.jpeg"
-            alt="Mousepads Personalizados"
-          />
+          <img src="img/mousepad.jpeg" alt="Mousepads Personalizados" />
         </td>
         <td>Mousepads Personalizados - Infantil</td>
         <td>R$35,00</td>
         <td>25</td>
       </tr>
 
-      <tr>
+      <tr id="tr-tabela">
         <td>
-          <img
-            src="/sistema-loja/img/fonescoloridos.jpg"
-            alt="Fones de ouvido"
-          />
+          <img src="/img/fonescoloridos.jpg" alt="Fones de ouvido" />
         </td>
         <td>Fones de ouvido - Com tecnologia 8D</td>
         <td>R$80,00</td>
         <td>40</td>
       </tr>
 
-      <tr>
+      <tr id="tr-tabela">
         <td>
-          <img src="/sistema-loja/img/teclado.jpg" alt="Teclado Gamer" />
+          <img src="img/teclado.jpg" alt="Teclado Gamer" />
         </td>
         <td>Teclado Gamer - Led colorido metalizado</td>
         <td>R$129,99</td>
@@ -74,6 +88,25 @@
       </tr>
     </table>
 
-    <h3><a href="/sistema-loja/index.html">Voltar ao menu principal</a></h3>
+    <h3 class="texto-link">
+      <a href="/index.html">Voltar ao menu principal</a>
+    </h3>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="contato">
+        <h3>Fale Conosco</h3>
+        <p>(61) 3344-8574</p>
+        <p>(61) 9 8621-2292</p>
+        <p>CNPJ: 07.897.813/0001-10</p>
+      </div>
+
+      <div class="redes">
+        <h3>Nossas Redes</h3>
+        <p>Instagram</p>
+        <p>Facebook</p>
+        <p>LinkedIn</p>
+      </div>
+    </footer>
   </body>
 </html>
