@@ -143,6 +143,11 @@ td button {
   height: 100px;
 }
 
+.container-do-search input {
+  border: none;
+  border-bottom: 1px solid #aaa;
+}
+
 .container-do-search img {
   width: 25px;
 }
