@@ -160,3 +160,7 @@ td button {
 #back-button:hover {
   background-color: #635a3d;
 }
+
+.comprar-button:hover {
+  background-color: #a88e18;
+}
