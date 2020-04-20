@@ -13,6 +13,11 @@ body {
   font-family: "Roboto", sans-serif, "Times New Roman", Times;
 }
 
+input,
+button {
+  outline: none;
+}
+
 h2 {
   background-color: #fe7e02;
   padding: 10px 5px 10px 5px;
@@ -74,7 +79,8 @@ div > p:first-child {
 #container-de-descricao p {
   position: absolute;
   top: 22%;
-  right: 45%;
+  right: 42%;
+  bottom: 5px;
 }
 
 #container-de-descricao > ol {
@@ -89,8 +95,8 @@ div > p:first-child {
 
 #container-de-descricao h3 {
   position: absolute;
-  left: 40%;
-  top: 43%;
+  left: 41%;
+  top: 45%;
 }
 
 #container-para-comprar {
@@ -123,6 +129,7 @@ div:last-child {
 
 table {
   width: 60%;
+  margin: auto;
 }
 
 table td {
@@ -156,6 +163,10 @@ td button {
   width: 25px;
 }
 
+.container-do-search img:hover {
+  opacity: 0.5;
+}
+
 #back-button {
   background-color: white;
   width: 100px;
@@ -164,6 +175,11 @@ td button {
   border-radius: 5px;
   font-size: 10px;
   color: black;
+}
+
+.botao-preto {
+  margin-top: 15%;
+  text-align: center;
 }
 
 #back-button:hover {
