@@ -73,17 +73,24 @@ div img {
 
 #container-de-descricao p {
   position: absolute;
-  top: 70px;
+  top: 22%;
   right: 45%;
 }
 
-#container-de-descricao ol {
-  padding: 5px 0px;
-  position: absolute;
+#container-de-descricao > ol {
+  padding: 10% 0px;
 }
 
 #container-de-descricao li {
-  color: #c44f00;
+  position: absolute;
+  padding-top: 3%;
+  left: 42%;
+}
+
+#container-de-descricao h3 {
+  position: absolute;
+  left: 40%;
+  top: 42%;
 }
 
 #container-para-comprar {
