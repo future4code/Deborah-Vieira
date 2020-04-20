@@ -90,7 +90,7 @@ div img {
 #container-de-descricao h3 {
   position: absolute;
   left: 40%;
-  top: 42%;
+  top: 43%;
 }
 
 #container-para-comprar {
@@ -123,6 +123,10 @@ div:last-child {
 
 table {
   width: 60%;
+}
+
+table td {
+  text-align: center;
 }
 
 td button {
