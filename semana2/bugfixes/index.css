@@ -1,0 +1,191 @@
+/** 
+  *
+  *  ESTILOS GERAIS 
+  *
+  **/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif, "Times New Roman", Times;
+}
+
+input,
+button {
+  outline: none;
+}
+
+h2 {
+  background-color: #fe7e02;
+  padding: 10px 5px 10px 5px;
+  color: white;
+  text-align: center;
+}
+
+input {
+  height: 20px;
+  width: 500px;
+}
+
+button:focus {
+  color: white;
+}
+
+img {
+  width: 100px;
+}
+
+div > p:first-child {
+  display: inline;
+}
+
+.botao-amarelo {
+  background-color: #ffaf43;
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 20px;
+  color: white;
+}
+
+.botao-amarelo:hover {
+  background-color: #c44f00;
+}
+
+.container {
+  height: 500px;
+  text-align: center;
+}
+
+.icone {
+  height: 15px;
+}
+
+/** 
+  *
+  *  ESTILOS HOME 
+  *
+  **/
+
+#container-de-descricao {
+  background-color: #2274a5;
+  color: white;
+  position: relative;
+}
+
+#container-de-descricao p {
+  position: absolute;
+  top: 22%;
+  right: 42%;
+  bottom: 5px;
+}
+
+#container-de-descricao > ol {
+  padding: 10% 0px;
+}
+
+#container-de-descricao li {
+  position: absolute;
+  padding-top: 3%;
+  left: 42%;
+}
+
+#container-de-descricao h3 {
+  position: absolute;
+  left: 41%;
+  top: 45%;
+}
+
+#container-para-comprar {
+  background-color: #e7eb90;
+  position: relative;
+}
+
+#container-para-comprar button {
+  position: absolute;
+  top: 30%;
+  right: 40%;
+}
+
+#container-para-comprar > p {
+  color: #c44f00;
+  padding: 100px 0;
+  font-size: 60px;
+}
+
+/**
+  *
+  *  ESTILOS COMPRAR 
+  *
+  **/
+
+div:nth-child(2),
+div:last-child {
+  text-align: center;
+}
+
+table {
+  width: 60%;
+  margin: auto;
+}
+
+table td {
+  text-align: center;
+}
+
+table tr td img {
+  width: 50px;
+  height: 40px;
+}
+
+td button {
+  background-color: #fadf63;
+  width: 150px;
+  height: 30px;
+  border-radius: 5px;
+  color: black;
+}
+
+.container-do-search {
+  margin-top: 20px;
+  height: 100px;
+}
+
+.container-do-search input {
+  border: none;
+  border-bottom: 1px solid #aaa;
+}
+
+.container-do-search img {
+  width: 25px;
+}
+
+.container-do-search img:hover {
+  opacity: 0.5;
+}
+
+#back-button {
+  background-color: white;
+  width: 100px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 10px;
+  color: black;
+}
+
+.botao-preto {
+  margin-top: 15%;
+  text-align: center;
+}
+
+#back-button:hover {
+  background-color: #635a3d;
+}
+
+.comprar-button:hover {
+  background-color: #a88e18;
+}
