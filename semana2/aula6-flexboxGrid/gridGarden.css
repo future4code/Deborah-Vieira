@@ -1,0 +1,172 @@
+/* Template acima de qualquer inicio
+#garden {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+} */
+/* Direção dentro do grid */
+#water {
+  grid-column-start: 3;
+}
+
+#Poção {
+  grid-column-start: 5;
+}
+
+/* Inicio e fim de uma coluna */
+#water {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+/* Começando no final da coluna */
+
+#water {
+  grid-column-start: 5;
+  grid-column-end: 2;
+}
+
+/* Valores negativos */
+#water {
+  grid-column-start: 1;
+  grid-column-end: -2;
+}
+
+#Poção {
+  grid-column-start: -3;
+}
+
+/* span só funciona com valores positivos. */
+/* Espandindo a coluna */
+#water {
+  grid-column-start: 2;
+  grid-column-end: span 2;
+}
+
+#water {
+  grid-column-start: 1;
+  grid-column-end: span 5;
+}
+
+#water {
+  grid-column-start: span 3;
+  grid-column-end: 6;
+}
+
+/* Usando o start e o end de forma abreviada */
+#water {
+  grid-column: 4 /6;
+}
+
+#water {
+  grid-column: span 3/5;
+}
+
+/* COLUNAS E LINHAS */
+
+#water {
+  grid-row-start: 3;
+}
+
+#water {
+  grid-row: span 3 /6;
+}
+
+/* os dois juntos */
+#poison {
+  grid-column: 2;
+  grid-row: 5;
+}
+
+/* Abranges várias linhas e colunas */
+#water {
+  grid-column: span 4/6;
+  grid-row: span 6;
+}
+
+#water {
+  grid-column: 2/6;
+  grid-row: 1/6;
+}
+
+/* IMPORTANTE
+Se você digitar os dois grid-columne grid-row 
+for demais para você, ainda há outra abreviação para isso. 
+grid-areaaceita quatro valores separados por barras:
+ grid-row-start, grid-column-start, grid-row-end, seguido por grid-column-end.
+Um exemplo disso seria grid-area: 1 / 1 / 3 / 6;. */
+
+#water {
+  grid-area: 1 / 2/ 4 / 6;
+}
+
+/* Sobrepondo areas */
+#water-2 {
+  grid-area: 2/3/5/6;
+}
+
+/* order para mover */
+#Poção {
+  order: 1;
+}
+
+.Poção {
+  order: -2;
+}
+
+/* Fazendo meu grid*/
+#garden {
+  display: grid;
+  grid-template-columns: 50% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+/* de forma reduzida usando repeat */
+#garden {
+  display: grid;
+  grid-template-columns: repeat(8, 12.5%);
+  grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+/* usando porcentagens e outros */
+#garden {
+  display: grid;
+  grid-template-columns: 100px 3em 40%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+/* usando fraçoes */
+#garden {
+  display: grid;
+  grid-template-columns: 1fr 5fr; /*6 colunas*/
+  grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+/* Dificil - criando colunas no meio */
+#garden {
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 1fr 50px;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+#garden {
+  display: grid;
+  grid-template-columns: 75px 3fr 2fr;
+  grid-template-rows: 100%;
+}
+
+#garden {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 50px 0fr 0fr 0fr;
+}
+
+#garden {
+  display: grid;
+  grid-template: 60% / 200px;
+}
+
+#garden {
+  display: grid;
+  grid-template: 1fr 50px / 20% 80%;
+}
