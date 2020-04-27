@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+}
+
+/* CONTAINER INICIO */
+.container {
+  display: flex;
+
+  height: 35px;
+}
+
+.header {
+  background-color: #2ecc40;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  background-color: #ffdc00;
+  flex-grow: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CONTAINER MEIO */
+
+.segundo-container {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  height: 350px;
+}
+
+.rosa {
+  background-color: #f012be;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+/* CONTAINER FIM */
+.terceiro-container {
+  display: flex;
+
+  color: #fff;
+  height: 180px;
+}
+
+.azul {
+  background-color: #0074d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 620px;
+}
+
+.branco {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  width: 320px;
+}
+
+.container-interno {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.vermelho {
+  background-color: #ff4136;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 390px;
+  height: 400px;
+}
+.verde {
+  background-color: #01ff70;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.footer {
+  background-color: #b10dc9;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  height: 72px;
+}

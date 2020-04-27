@@ -1,0 +1,173 @@
+/* Alinha horizontalmente ao final lado direito */
+#pond {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Centraliza os elementos */
+#pond {
+  display: flex;
+  justify-content: center;
+}
+
+/* Alinha ao centro com espaço lateral */
+#pond {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Alinha ao centro com espaço igual entre eles */
+#pond {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*  Alinha verticalmente ao fim*/
+#pond {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Alinha horizontalmente e verticalmente ao centro */
+#pond {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Alinha ao centro com espaços ao redos e ao final da pagina */
+#pond {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+/* Alinha a direita e ao contrário : 3 2 1 */
+#pond {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* Alinha vertical canto esquerdo */
+#pond {
+  display: flex;
+  flex-direction: column;
+}
+
+/*quando você define a direção para uma linha
+ ou coluna invertida, o início e o final 
+ também são invertidos. Alinha a esquerda topo */
+#pond {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+/* Observe que quando a direção flexível é uma coluna,
+ justify-contentmuda para a vertical e align-itemsa horizontal. 
+ Alinha coluna em baixo esquerda*/
+#pond {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+/* Mesma coisa acima, coluna a diferença é alinhamento com espaço 
+entre eles iguais. */
+#pond {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}
+
+/* Alinha em baixo e centralizado */
+#pond {
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/*ORDEM DAS COISAS */
+#pond {
+  display: flex;
+}
+
+.amarelo {
+  order: 3;
+}
+
+.red {
+  order: -4;
+}
+
+/* Alinhando um elemento ao final*/
+.amarelo {
+  align-self: flex-end;
+}
+
+/* Alinha os elementos ao final somente as da cor e sua ordem */
+.amarelo {
+  order: 3;
+  align-self: flex-end;
+}
+
+/* itens agrupados em linhas adcionais, quebram linha */
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 3 Colunas organizadas, cada conteudo no seu espaço */
+#pond {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/* As duas propriedades flex-directione flex-wrapsão utilizadas tantas vezes juntos que a propriedade estenográfica flex-flowfoi criado para combiná-los. Essa propriedade taquigráfica aceita 
+o valor de uma das duas propriedades 
+separadas por um espaço. Por exemplo, 
+você pode usar flex-flow: row wrap 
+para definir linhas e quebrá-las. */
+#pond {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+/* Alinhando as linhas do conteiner, nesse caso no inicio */
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+/* Mesma coisa anterior conteiner abaixo */
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+}
+
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Estão em coluna e centralizados */
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  align-content: center;
+}
+
+/* Levando os sapinhos para casa */
+#pond {
+  display: flex;
+  /*Move a coluna ao contrário em seus items e o wrap-reverse a coluna inteira*/
+  flex-flow: column-reverse wrap-reverse;
+  justify-content: center; /*centraliza*/
+  align-content: space-between; /*iguala os espaços entre eles no container*/
+}
+
+/*  */
