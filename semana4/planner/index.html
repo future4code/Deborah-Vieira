@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=3, initial-scale=1.0" />
+    <script src="/main.js"></script>
+    <link rel="stylesheet" href="/style.css" />
+    <title>Planer</title>
+  </head>
+  <body>
+    <h1>Meu Planer</h1>
+    <div class="container">
+      <p>Nova Tarefa:</p>
+      <input type="text" />
+
+      <select name="diaDaSemana" id="diaDaSemana">
+        <option value="segunda">Segunda</option>
+        <option value="terca">Terça</option>
+        <option value="quarta">Quarta</option>
+        <option value="quinta">Quinta</option>
+        <option value="sexta">Sexta</option>
+        <option value="sabado">Sábado</option>
+        <option value="domingo">Domingo</option>
+      </select>
+
+      <button onclick="criarTarefa()">Criar Tarefa</button>
+    </div>
+
+    <div class="semana">
+      <div id="segunda">
+        Segunda
+        <ul class="ul-tarefas"></ul>
+      </div>
+
+      <div id="terca">
+        Terça
+        <ul class="ul-tarefas"></ul>
+      </div>
+
+      <div id="quarta">
+        Quarta
+        <ul class="ul-tarefas"></ul>
+      </div>
+
+      <div id="quinta">
+        Quinta
+        <ul class="ul-tarefas"></ul>
+      </div>
+
+      <div id="sexta">
+        Sexta
+        <ul class="ul-tarefas"></ul>
+      </div>
+
+      <div id="sabado">
+        Sábado
+        <ul class="ul-tarefas"></ul>
+      </div>
+
+      <div id="domingo">
+        Domingo
+        <ul class="ul-tarefas"></ul>
+      </div>
+    </div>
+  </body>
+</html>
