@@ -22,8 +22,13 @@ class Post extends React.Component {
 
   onClickCurtida = () => {
     console.log("Curtiu!");
+    this.setState({
+      curtido: !this.state.curtido,
+    });
 
     if (this.state.curtido === true) {
+      this.setState({ numeroCurtidas: this.state.numeroCurtidas - 1 });
+    } else {
       this.setState({ numeroCurtidas: this.state.numeroCurtidas + 1 });
     }
   };
@@ -44,7 +49,7 @@ class Post extends React.Component {
 
   render() {
     let iconeCurtida;
-    /* estado curtido aqui */
+
     if (this.state.curtido) {
       iconeCurtida = iconeCoracaoPreto;
     } else {
@@ -81,15 +86,10 @@ class Post extends React.Component {
           <div className={"post-footer"}>
             <IconeComContador
               icone={iconeCurtida}
-              onClickIcone={
-                this.onClickCurtida
-              } /* é chamada quando clico no icone de coração */
-              valorContador={
-                this.state.numeroCurtidas
-              } /* estado numerocurtidas aqui */
+              onClickIcone={this.onClickCurtida}
+              valorContador={this.state.numeroCurtidas}
             />
-            {/* Recebe o icone.  a função de clique de comentário que altera o estado da variavel
-comentando e o valor contador vem da variavel da função ao comentar que é um contador*/}
+
             <IconeComContador
               icone={iconeComentario}
               onClickIcone={this.onClickComentario}
@@ -117,20 +117,15 @@ comentando e o valor contador vem da variavel da função ao comentar que é um 
           <div className={"post-footer"}>
             <IconeComContador
               icone={iconeCurtida}
-              onClickIcone={
-                this.onClickCurtida
-              } /* é chamada quando clico no icone de coração */
-              valorContador={
-                this.state.numeroCurtidas
-              } /* estado numerocurtidas aqui */
+              onClickIcone={this.onClickCurtida}
+              valorContador={this.state.numeroCurtidas}
             />
-            {/* Recebe o icone.  a função de clique de comentário que altera o estado da variavel
-comentando e o valor contador vem da variavel da função ao comentar que é um contador*/}
+
             <IconeComContador
               icone={iconeComentario}
               onClickIcone={this.onClickComentario}
               valorContador={
-                this.state.numeroComentarios
+                this.state.numeroComentariosPostDois
               } /* estado numerocomentario aqui */
             />
           </div>

@@ -2,9 +2,14 @@ import React, { Component } from "react";
 import "./SecaoComentario.css";
 
 export class SecaoComentario extends Component {
-  state = {};
+  state = {
+    comentario: "",
+  };
 
-  onChangeComentario() {}
+  onChangeComentario = (event) => {
+    this.setState({ comentario: event.target.value });
+    console.log(this.state.comentario + " Foi digitado");
+  };
 
   render() {
     return (
