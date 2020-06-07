@@ -12,8 +12,10 @@ function App() {
       {" "}
       <CreatePlaylist />
       <ShowPlaylist />
-      {/*  <ShowMusics />
-      <AddMusic /> */}
+      <br />
+      <ShowMusics />
+      <br />
+      <AddMusic />
     </div>
   );
 }

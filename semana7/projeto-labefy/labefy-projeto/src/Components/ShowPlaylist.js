@@ -1,30 +1,27 @@
 import React from "react";
-
 import axios from "axios";
-
-const axiosConfig = {
-  headers: {
-    Authorization: "Deborah-Vieira-mello",
-  },
-};
 
 class ShowPlaylist extends React.Component {
   state = {
-    playlistsList: [],
+    playlists: [],
   };
 
-  /*  componentDidMount() {
-    this.fetchPlaylist();
-  } */
+  componentDidMount() {
+    this.pegaPlaylist();
+  }
 
-  mostrarPlaylist = () => {
+  pegaPlaylist = () => {
     axios
       .get(
         "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists",
-        axiosConfig
+        {
+          headers: {
+            Authorization: "Deborah-Vieira-mello",
+          },
+        }
       )
       .then((response) => {
-        this.setState({ playlistsList: response.data });
+        this.setState({ playlists: response.data.result.list });
       })
       .catch((erro) => {
         console.log(erro);
@@ -34,16 +31,10 @@ class ShowPlaylist extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.mostrarPlaylist}>Mostrar Playlist</button>
-
-        <ul>
-          {this.state.playlistsList.length === 0 && (
-            <div>Carregando Playlist...</div>
-          )}
-          {this.state.playlistsList.map((playlist) => {
-            return <li>{playlist}</li>;
-          })}
-        </ul>
+        <h2>Suas playlist</h2>
+        {this.state.playlists.map((playlist) => {
+          return <li key={playlist.id}>{playlist.name}</li>;
+        })}
       </div>
     );
   }

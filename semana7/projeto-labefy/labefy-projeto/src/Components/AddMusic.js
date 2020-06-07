@@ -4,6 +4,7 @@ import axios from "axios";
 
 class AddMusic extends React.Component {
   state = {
+    musics: [],
     name: "",
     artist: "",
     url: "",
@@ -41,7 +42,9 @@ class AddMusic extends React.Component {
     };
 
     const idPlaylist = {
-      id: "9cc2ced4-cc48-4b18-843c-2371e9e942aa",
+      params: {
+        playlistId: "9cc2ced4-cc48-4b18-843c-2371e9e942aa",
+      },
     };
 
     axios
