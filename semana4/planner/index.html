@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=3, initial-scale=1.0" />
-    <script src="/main.js"></script>
-    <link rel="stylesheet" href="/style.css" />
+   <script src="/main.js" defer></script>
+   <link rel="stylesheet" href="/style.css">  
+
     <title>Planer</title>
   </head>
   <body>
     <h1>Meu Planer</h1>
     <div class="container">
-      <p>Nova Tarefa:</p>
+      <p>Nova Tarefa: </p>
       <input type="text" />
 
       <select name="diaDaSemana" id="diaDaSemana">
@@ -23,7 +24,7 @@
         <option value="domingo">Domingo</option>
       </select>
 
-      <button onclick="criarTarefa()">Criar Tarefa</button>
+      <button class="botao" onclick="criarTarefa()">Criar Tarefa</button>
     </div>
 
     <div class="semana">

@@ -1,14 +1,15 @@
 function criarTarefa() {
-  const input = document.querySelector("input");
+  let input = document.querySelector("input");
 
   //nova tarefa recebe o valor do campo digitado.
-  const novaTarefa = input.value;
-  if (novaTarefa === "") {
-    alert("Digite uma tarefa");
-  }
+  let novaTarefa = input.value
 
-  const listaSemana = document.querySelector("#diaDaSemana");
-  const lista = listaSemana.value;
+  if (novaTarefa === "") {
+    alert("Insira uma tarefa");
+
+  } 
+  let listaSemana = document.querySelector("#diaDaSemana");
+  let lista = listaSemana.value;
   console.log(lista);
 
   let listaTarefas = document.querySelector("#" + lista + " .ul-tarefas ");
@@ -17,4 +18,9 @@ function criarTarefa() {
 
   //limpando o campo
   input.value = "";
+
+  
+  
 }
+
+ 
