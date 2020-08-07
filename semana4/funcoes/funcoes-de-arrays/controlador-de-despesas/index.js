@@ -13,11 +13,13 @@ function addDespesas(){
         descricao = descricaoDespesa.value
     }
 
-
     arrayPosts.push(novaDespesa)
     //limpando os campos
     valorDespesa.value =""
     tipoDespesa.value =""
     descricaoDespesa.value =""
     console.log(arrayDespesas)
+    
 }
+
+//inserindo a despesa no html
