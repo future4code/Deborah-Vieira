@@ -5,7 +5,7 @@ body {
 }
 
 .tela-inteira {
-  height: 100vh;
+  height: 117vh;
   display: flex;
   flex-direction: column;
 }
@@ -32,11 +32,30 @@ main {
 
 .botoes-meunu-vertical {
   list-style-type: none;
+  cursor: pointer;
+
+}
+.botoes-meunu-vertical:hover {
+  color: orange;
+}
+
+h3{
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+
+h4 {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+h4:hover {
+  color: orange;
 }
 
 .painel-de-videos {
-  padding-left: 20px;
-  padding-top: 20px;
+  padding-top: 60px;
   flex-grow: 1;
   display: grid;
   grid-template-columns: repeat(4, 24.8% 0.2%);
@@ -96,9 +115,7 @@ main {
 footer {
   height: 7%;
   width: 100%;
-  background-color: grey;
-  margin: 0;
-  padding: 0;
+  background-color: #b4b8b8;
   position: fixed;
   bottom: 0;
   display: flex;
@@ -110,6 +127,3 @@ footer {
   height: 200px;
 }
 
-h4 {
-  margin-left: 20px;
-}
