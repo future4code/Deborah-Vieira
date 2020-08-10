@@ -1,4 +1,65 @@
 .form {
+<<<<<<< HEAD
+  max-width: 980px;
+}
+
+.form label {
+  display: block;
+  color: coral;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 10px;
+}
+
+.form input,
+textarea {
+  display: block;
+  width: 30%;
+  border: 2px solid #7c7c7c;
+  background: none;
+  padding: 7px 10px;
+  font-size: 14px;
+}
+
+button {
+  margin-top: 20px;
+  width: 33%;
+  height: 30px;
+  background-color: coral;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #7c7c7c;
+}
+
+img{
+  width: 100px;
+  height: 100px;
+}
+
+h1{
+  color:coral;
+  text-align: center;
+}
+
+/*Titulo post*/
+
+h2 {
+  margin-top: 20px;
+  font-size: 28px;
+  color: #7c7c7c;
+}
+
+ul {
+  color: coral;
+  font-size: 18px;
+  font-weight: bold;
+}
+=======
     max-width: 980px;
   }
   
@@ -48,3 +109,4 @@
     font-size: 18px;
     font-weight: bold;
   }
+>>>>>>> b0b82811a04015f077bf7a909c0c78971f560e48
