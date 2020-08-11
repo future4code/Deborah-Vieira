@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
@@ -28,15 +27,16 @@ function App() {
               <li className="botoes-meunu-vertical">Histórico</li>
             </ul>
           </nav>
-
+          <h3>Recomendados</h3> 
           <section className="painel-de-videos">
-            <div
+            <div            
               className="box-pagina-principal media1"
               onClick={reproduzVideo}
-            >
+            >             
               <img src="https://picsum.photos/400/400?a=1 " alt="" />
               <h4>{titulo}</h4>
             </div>
+
             <div
               className="box-pagina-principal media2"
               onClick={reproduzVideo}
