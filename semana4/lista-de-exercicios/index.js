@@ -1,78 +1,92 @@
 /*Exercícios de interpretação de código */
 
-/*Exercicio 1-R: A função conversorDeMoeda transforma o valor 
-digitado em dolar pelo usuário para o real. A variavel cotação recebe o valor
-cotado, retorno o valor digitado multiplicado pela cotação. A variavel meuDinheiro
-recebe a chamada da função com o argumento, e o console.log() mostrará na tela
-o valor convertido para real nesse caso 573,00, cotação de hoje. 
+/*Exercicio 1-R: Transforma o valor digitado pelo usuário em dolar para o real.
+ A variavel cotação recebe o valor digitado.
+ A variavel meuDinheiro recebe a chamada da função com o argumento, 
+ e o console.log() mostrará na tela
+ o valor convertido para real nesse caso multiplicado por 100. 
+
 
 /*Exercicio 2-R: A função investeDinheiro calcula o valor de tipos de investimentos
 passando 02 parametros. Dependendo do investimento escolhido o valor será
-alterado. A variavel novoMontate recebe a chamada da função e seu argumento, retornará
-em tela o valor de 165,00 de ações.A variavel segundoMontante será um erro de 
-tipo de investimento informado incorreto,pois o tesouro direto não está 
-listado como um tipo de investimento.  */
+alterado. A variavel novoMontante recebe a chamada da função e seu argumento, retornará
+em tela o valor de 165.A variavel segundoMontante será um erro de 
+"tipo de investimento", pois o tesouro direto não está listado como um tipo de 
+investimento. Ele irá cair no default e irá informar que o tipo de investimento
+não existe.  */
 
-/*Exercicio 3-R: O tamanho do array numeros é 13. O for está iterando esse array
-para cada numero par, adcionar no array1, para os numeros impares adcionar no array2
-Quantidade de numeros : 13, 
-array1: 5 
-array2: 7
 
-/*Exercicio 4-R:  */
+/*Exercicio 3-R: É uma lista de números que é iterada usando o (for of) 
+e separando os multiplos de 2 em um array e os que não são em outro.
+O for está iterando esse array para cada numero par, adcionar no array1, 
+para os numeros impares adcionar no array2
+Quantidade de numeros : 14, 
+array1: 6
+array2: 8
 
-/*Lógica de programação*/ ///
 
-/*1. Cite 3 maneiras de se percorrer/iterar uma lista. 
+/*Exercicio 4-R:  
+O código contem um array que é iterado e duas variaveis que são usadas para guardar
+numeros de infinito e 0.
+Se o numero for menor que o infinito será armazenado na variavel numero1
+se for maior que 0, ele será armazenada na variavel numero 2. 
+Ao final será impressso o maior numero 1590 e o menor -10
+
+
+/*Lógica de programação*/ 
+
+/*Exercicio 1-R: Cite 3 maneiras de se percorrer/iterar uma lista. 
  Usando o for, for of, while
-Faça um programa para exemplificar.
+
 const numeros = [18, 20, 6, 3, 12];
+
+Exemplo 01
 for (let numero of numeros) {
   console.log(numero);
 }
 
+Exemplo 02
 const arrayNum = [1, 2, 3, 4, 5];
 for (let i = 0; i < arrayNum.length; i++) {
-  const valores = arrayNum[i + 1];
-  console.log(valores);
+  console.log(arrayNum[i]);
 } 
 
-ERRADO CORRIGIR
+Exemplo 03
 const mapeando = [1, 2, 3, 4, 5, 6];
-let mapeados = mapeando.map(Math.random);
-console.log(mapeados);
+let i =0;
+while(i < mapeando.length){
+  console.log(array[i])
+  i++
+}
 
-/*2-R: 
+
+/*Exercicio 2-R:
 A = False
 B = False
 C = True
 D = True
-E = False
+E = True
 
 */
 
-/*3-R: Não funciona porque a variavel quantidadeDeNumerosPares
-e o console está multiplicado ao inves de usar o resto da divisao
+/*Exercicio 3-R: E não existe o incremento para que satisfaça a condição, corre
+ o risco de um loop infinito. E 
 
-TRAVEI AQUI
-const quantidadeDeNumerosPares = 3;
-let i = 0;
-while (i <= quantidadeDeNumerosPares) {
-  console.log(i % 2);
-}
+    function NumerosPares() {
+     const quantidadeDeNumerosPares 
+     let i = 0;
+      while (i < quantidadeDeNumerosPares) {
+      console.log(i * 2);
+      i++;
+    } 
+   }
  */
 
-/* let i = 0;
-while (i < 10) {
-  console.log(i);
-  i++;
-} */
 
-/*4-R:
+/* Exercicio 4-R:
 Função classificar triangulo
-
 function classificarTriangulo(a, b, c) {
-  if (a === b && b === c && c === a) {
+  if (a === b && b === c) {
     console.log("O Triangulo é Equilátero!");
   } else if (a === b || b === c || a === c) {
     console.log("O Triangulo é Isóceles!");
@@ -80,43 +94,87 @@ function classificarTriangulo(a, b, c) {
     console.log("O Triangulo é Escaleno!");
   }
 }
-
-classificarTriangulo(2, 1, 1);*/
-
-/*5-R:
- function classificarNumeros(num1, num2) {
-  if (num1 > num2) {
-    Console.log("O " + num1 + " é maior que o " + num2);
-  } else {
-    console.log("O " + num2 + " é maior que o " + num1);
-  }
-
-  if (num1 % num2 != 0) {
-    console.log("O " + num1 + " não é divisivel por " + num2);
-  } else {
-    console.log("O " + num1 + " é divisivel por " + num2);
-  }
-}
-
-classificarNumeros(40, 30);
+classificarTriangulo(2, 1, 1);
 */
 
-/* FUNÇÕES *******/
-/* 1:R 
+/*Exercicio 5-R:
+function classificarDoisNumeros(num1,num2) {
+  let maiorNumero = 0
+  let menorNumero = 0
+
+  if(num1 > num2) {
+    maiorNumero = num1
+    menorNumero = num2
+  } else {
+    maiorNumero = num2
+    menorNumero = num1
+  }
+  console.log("O maior é ", maiorNumero)
+
+  //aqui é feita a comparação de quem é divisivel por quem.
+  if(menorNumero % maiorNumero === 0) {
+    console.log(menorNumero.toString(), " é divisível por ", maiorNumero.toString())
+  } else {
+    console.log(menorNumero.toString(), " não é divisível por ", maiorNumero.toString())
+  }
+
+  if(maiorNumero % menorNumero === 0) {
+    console.log(maiorNumero.toString(), " é divisível por ", menorNumero.toString())
+  } else {
+    console.log(maiorNumero.toString(), " não é divisível por ", menorNumero.toString())
+  }
+
+  console.log("A diferença entre eles é ", maiorNumero - menorNumero)
+}
+
+
+
+
+/* FUNÇÕES ******
+// Exercicio 1:R 
+//resolução labenu
+
 function imprimeMaiorEMenor(array) {
-  listaArray = [];
+  arrayDeNumeros.sort(function(num1, num){
+    return num1 > num2;
+});
 
+const segundoMenorNumero = arrayDeNumeros[1];
+
+const segundoMaiorNumero = arrayDeNumeros[array.lenght - 2];
+
+console.log(segundoMenorNumero);
+console.log(segundoMaiorNumero);
 }
+
+Exercicio 2:R
+const messageAlerta =  () => {
+  alert("Hello Future4");
+}
+
+messageAlerta()
 */
+
+
 
 /* OBJETOS ******/
-/* 1-R: Objeto é uma coleção de dados, dentro desses dados são armazenadas
+/* Exercicio 1-R: Objeto é uma coleção de dados relacionados, dentro desses dados são armazenadas
 propriedades, chave e valor de cada dado. Array é uma lista ordenada de vários
-dados, que podemos acessar pelo indice.
+dados, que podemos acessar pelo indice começando pelo 0.
 
+Exercicio 2-R:
+function criarRetangulo(lado1, lado2){
+  return {
+    largura: lado1,
+    altura: lado2,
+    perimetro: (2 * (lado1 + lado2) ) ,
+    area: (lado1 * lado2)
+
+  }
+}
  
 
-/* Questão 3 -
+/* Exercicio 3 -
 const filmeFavorito = {
   Titulo: "Comer, rezar e amar",
   Ano: 2010,
@@ -141,9 +199,21 @@ console.log(
     " e " +
     filmeFavorito.Atores[3]
 );
+
+Outra forma iterando o array
+let listaAtores = ""
+
+for(let i = 0; i < filme.atores.length; i++) {
+	if (i !== filme.atores.length - 1) {
+		listaAtores += ator + ", "
+	} else {
+		listaAtores += ator + "."
+	}
+}
+
 */
 
-/* Questão 4 - 
+/* Exercicio 4 - 
 
 const pessoa = {
   nome: "Deborah",
@@ -151,16 +221,28 @@ const pessoa = {
   email: "deborahvn19@gmail.com",
   endereco: "Rua das acácias, 363 - Brasília",
 };
-pessoa.nome = "Anônimo";
 
-/* function anonimizarPessoa() {
-  return pessoa.nome;
+/* function anonimizarPessoa(pessoa) {
+  return {
+    ...pessoa,
+    nome:"ANONIMO"
+
+  }
 }
-console.log(pessoa.nome);
+
+outra forma
+function anonimizarPessoa(pessoa) {
+	return {
+		nome: "ANONIMO",
+		idade: pessoa.idade,
+		email: pessoa.email,
+		endereco: pessoa.endereco
+	}
+}
 */
 
 /****************Funções de array******************** */
-/*Questão 1
+/*Exercicio 1
 const idades = [
   { nome: "Pedro", idade: 20 },
   { nome: "João", idade: 10 },
@@ -168,34 +250,46 @@ const idades = [
   { nome: "Artur", idade: 89 },
 ];
 
-const exercicioA = idades.filter((idade, index, array) => {
+const adultos = idades.filter((idade, index, array) => {
   return idade >= 20;
 });
 
-const exercicioA = idades.filter((idade, index, array) => {
+const crianças = idades.filter((idade, index, array) => {
   return idade < 20;
 });
 */
 
-/**QUESTÃO 2 
+/**Exercicio 2 
 
 const array = [1, 2, 3, 4, 5, 6];
 // A
-/*function elementosMultiplicadosPorDois(elementos) {
-  console.log(elementos * 2);
-} 
+/*const arrayDobro = array.map(numeros => {
+  return numeros * 2
 
-array.forEach(elementosMultiplicadosPorDois);*/
+}) 
 
 /* B 
-function multiplicaPorTres(valores) {
-  console.log(valores * 3);
-}
-//array = array.toString();
-array.forEach(multiplicaPorTres);
-*/
+const arrayTriplo = array.map(triplos => {
+  const multiplicaPorTres = triplos * 3
+  return triplo.toString()
+})
 
-/* Questão 3 
+/*C
+const parOuImpar = array.map(numeros => ){
+  if(numeros % 2 === 0){
+    return numeros + " é par"
+  }else{
+     return numeros + " é impar"
+  }
+
+}
+
+console.log(arrayDobro)
+console.log(arrayTriplo)
+console.log(parOuImpar)
+
+
+/* Exercicio 3 
 const pessoas = [
   { nome: "Paula", idade: 12, altura: 1.8 },
   { nome: "João", idade: 20, altura: 1.3 },
@@ -206,10 +300,10 @@ const pessoas = [
 ];
 
 /* A 
-const filtro = pessoas.filter((pessoa) => {
+const pessoasAutorizadas = pessoas.filter((pessoa) => {
   return pessoa.idade > 14 && pessoa.idade <= 60 && pessoa.altura > 1.5;
 });
-console.log(filtro);*/
+console.log(pessoasAutorizadas);*/
 
 /* B não podem entrar no brinquedo.
 const pessoasNaoAutorizadas = pessoas.filter((pessoas) => {
@@ -217,8 +311,8 @@ const pessoasNaoAutorizadas = pessoas.filter((pessoas) => {
 });
 console.log(pessoasNaoAutorizadas);*/
 
-/* Questão 4 
-
+/* Exercicio 4 
+**essa resolução foi da labenu
 const consultas = [
   {
     nome: "João",
@@ -246,29 +340,66 @@ const consultas = [
   },
 ];
 
-let consultasNaoCanceladas = consultas.map((consulta, index, array) => {
-  if (consulta.cancelada === true) {
-    return `Olá , ${consulta.nome} estamos enviando essa mensagem para lembra-lo(a)
-  da sua consulta no dia ${consulta.dataDaConsulta} . Por favor, acuse
-  o recebimento deste e-mail.`;
+const emails = consultas.map((consulta) => {
+  let emailFinal = "Olá, "
+
+  if(consulta.cancelada) {
+    if(consulta.genero === "feminino") {
+      emailFinal += "Sra. "
+    } else {
+      emailFinal += "Sr. "
+    }
+
+    emailFinal += consulta.nome + ". "
+
+    emailFinal += "Estamos enviando esta mensagem para "
+
+    if(consulta.genero === "feminino") {
+      emailFinal += "lembrá-la "
+    } else {
+      emailFinal += "lembrá-lo "
+    }
+
+    emailFinal += "da sua consulta no dia " + consulta.dataDaConsulta + ". "
+    emailFinal += "Por favor, acuse o recebimento deste-email."
+  } else {
+
+    if(consulta.genero === "feminino") {
+      emailFinal += "Sra. "
+    } else {
+      emailFinal += "Sr. "
+    }
+
+    emailFinal += consulta.nome + ". "
+
+    emailFinal += "Infelizmente sua consulta marcada para o dia "
+
+    emailFinal += consulta.dataDaConsulta + " foi cancelada. "
+    emailFinal += "Se quiser, pode entrar em contato conosco para remarcá-la."
   }
-});
+  return emailFinal
+})
 
-let consultasCanceladas = consultas.map((consulta, index, array) => {
-  if (consulta.cancelada === false) {
-    return `Olá , ${consulta.nome} Infelizmente, sua consulta marcada
-    para o dia ${consulta.dataDaConsulta} .foi cancelada. Se quiser, pode entrar em 
-    contato conosco para remarcá-la.`;
-  }
-});
 
-console.log(consultasNaoCanceladas);
-console.log(consultasCanceladas);
-/* const numeros = [10, 20, 25, 7, 30];
 
-let strings = numeros.map((numero, index, array) => {
-  return `O elemento ${index} é ${numero}`;
-});
+//* Exercicio 5
+const contas = [
+	{ cliente: "João", saldoTotal: 1000, compras: [100, 200, 300] },
+	{ cliente: "Paula", saldoTotal: 7500, compras: [200, 1040] },
+	{ cliente: "Pedro", saldoTotal: 10000, compras: [5140, 6100, 100, 2000] },
+	{ cliente: "Luciano", saldoTotal: 100, compras: [100, 200, 1700] },
+	{ cliente: "Artur", saldoTotal: 1800, compras: [200, 300] },
+	{ cliente: "Soter", saldoTotal: 1200, compras: [] }
+]
 
-console.log(strings);
- */
+ contas.forEach((contas) => {
+
+  let todasCompras = 0
+  conta.compras.forEach((valor) => {
+    totalDeCompras += valor
+  })
+
+  conta.saldoTotal -= totalDeCompras
+}) 
+
+*/
