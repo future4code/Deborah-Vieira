@@ -10,7 +10,6 @@ function CardPequeno(props) {
         <div>
           <h3>{props.email}</h3>
           <h3>{props.endereco}</h3>
-          <h3>{props.telefone}</h3>
         </div>
       </div>
     </>
