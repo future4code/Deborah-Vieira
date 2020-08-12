@@ -1,0 +1,13 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.bg-header{
+    background-color: #0073b0;
+    font-size: 32px;
+    padding: 7px;
+}
+.bg-header p{
+    color: #fff;
+}
