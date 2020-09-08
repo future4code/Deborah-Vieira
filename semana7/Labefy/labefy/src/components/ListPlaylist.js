@@ -2,6 +2,7 @@
 import React from "react";
 import axios from "axios";
 import { baseUrl, axiosConfig } from "../constantes/Constantes";
+import PlaylistInfo from "./PlaylistInfo";
 
 class ListPlaylist extends React.Component {
   state = {
@@ -52,6 +53,7 @@ class ListPlaylist extends React.Component {
             </li>
           );
         })}
+        <PlaylistInfo />
       </>
     );
   }
