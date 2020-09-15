@@ -1,14 +1,19 @@
 import React from "react";
 import HomePage from "./Components/HomePage";
-import { Route } from "react-router-dom";
-import Router from "./Router";
+
+import Routes from "./Routes";
+import GlobalStyles from "./Styles/GlobalStyles";
 
 function App() {
   return (
-    <div className="App">
-      <Router />
-    </div>
+    <>
+      {/* <HomePage /> */}
+      <Routes />
+      <GlobalStyles />
+    </>
   );
 }
+
+/* BATER NOS ENDPOINTS */
 
 export default App;
