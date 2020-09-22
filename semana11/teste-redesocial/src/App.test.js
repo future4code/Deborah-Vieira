@@ -16,18 +16,7 @@ test("Verifica se um novo post foi criado", () => {
   fireEvent.click(buttonAdd);
 
   /* Verificação */
-  let contadorPost = getByText(/teste/i);
-  expect(contadorPost).toHaveTextContent("teste");
+  let Post = getByText(/teste/i);
+  expect(Post).toHaveTextContent("teste");
   /*  expect(inputLabel.value).toEqual("teste"); */
 });
-
-/* est("Verifica a funcionalidade do botão alterar curtida", () => {
-  const { getByText } = render(<App />);
-
-  const botaoCurtida = getByText(/liked/i);
-
-  fireEvent.click(buttonCurtida);
-
-  expect(buttonCurtida).toHaveTextContent("true");
-});
- */
