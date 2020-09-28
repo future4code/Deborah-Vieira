@@ -1,5 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import { Wrapper, Container } from "../LoginPage/Stylelogin";
+import ListTripPage from "../ListTripPage/";
 
 /* Usando o Hook history, que pertence ao router-dom */
 const LoginPage = () => {
@@ -19,12 +21,21 @@ const LoginPage = () => {
   };
 
   return (
-    <div>
-      <p> Login</p>
-      <button onClick={goToTripsCreate}>Criar Viagem</button> <br /> <br />
-      <button onClick={goToTripsList}>Listar Viagem</button> <br /> <br />
-      <button onClick={goToTripsDetails}>Detalhe</button>
-    </div>
+    <>
+      <Wrapper>
+        <Container>
+          <p> LABEX</p>
+
+          <form>
+            <input type="email" placeholder="Seu nome" />
+            <input type="password" placeholder="Sua senha" />
+
+            <button>Enviar</button>
+          </form>
+        </Container>
+      </Wrapper>
+      <ListTripPage />
+    </>
   );
 };
 
