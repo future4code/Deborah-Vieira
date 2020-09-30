@@ -9,7 +9,6 @@ export const ScreenContainer = styled.div`
   form {
     display: flex;
     flex-direction: column;
-
     width: 80vw;
     /* Ele controla o tamanho máximo, para mobile está ok */
     max-width: 450px;
