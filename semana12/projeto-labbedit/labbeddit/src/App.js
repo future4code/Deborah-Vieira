@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
 
 import { ThemeProvider } from "@material-ui/core";
 import theme from "./constants/theme";
@@ -9,7 +10,9 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <Router />
+        <BrowserRouter>
+          <Router />
+        </BrowserRouter>
       </ThemeProvider>
     </div>
   );
