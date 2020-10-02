@@ -9,10 +9,7 @@ export const PostCreated = (body) => {
         Authorization: localStorage.getItem("token"),
       },
     })
-    .then((response) => {
-      console.log(response);
-      /* guardo o token para saber se o usuário está logado ou não,ele vem da  minha requisição quando logo  */
-    })
+    .then((response) => {})
     .catch((error) => {
       alert("Post não criado, por favor tente novamente");
     });
@@ -26,10 +23,7 @@ export const comentCreated = (body) => {
         Authorization: localStorage.getItem("token"),
       },
     })
-    .then((response) => {
-      console.log(response);
-      /* guardo o token para saber se o usuário está logado ou não,ele vem da  minha requisição quando logo  */
-    })
+    .then((response) => {})
     .catch((error) => {
       alert("Post não criado, por favor tente novamente");
     });

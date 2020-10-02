@@ -7,8 +7,6 @@ import { BASE_URL } from "../constants/urls";
 const useRequiredData = (initialDate, endpoint) => {
   const [data, setData] = useState(initialDate);
 
-  //requisição usando autorização
-  //funcionando com sucesso.
   useEffect(() => {
     axios
       .get(`${BASE_URL}${endpoint}`, {
@@ -17,8 +15,7 @@ const useRequiredData = (initialDate, endpoint) => {
         },
       })
       .then((response) => {
-        console.log(response, "posts da requisição");
-        setData(response.data.posts);
+        setData(response.data);
       })
       .catch((error) => {
         console.log(error);

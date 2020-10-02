@@ -17,7 +17,7 @@ import Loading from "../../components/Loading/Loading";
 import useForm from "../../Hooks/useForm";
 import { PostCreated } from "../../services/posts";
 import { goToPosts } from "../../router/Coordinator";
-import { useHistory, useParams } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const FeedPage = () => {
   const postFeed = useRequiredData([], "/posts");
@@ -28,7 +28,6 @@ const FeedPage = () => {
   });
 
   const history = useHistory();
-  const { id } = useParams();
 
   /* autorização de acesso */
   useProtectPage();
@@ -44,7 +43,6 @@ const FeedPage = () => {
       //requisição api,o body é a resposta do formulario
       PostCreated(form);
     }
-    console.log(form, "form do Criar Post");
   };
 
   return (
@@ -58,24 +56,18 @@ const FeedPage = () => {
         <form id={"createPost_form"}>
           <ContainerInput>
             <TextField
-              /* Valor vindo do input = form estado*/
               value={form.title}
-              /* vem da função handle, onde ele vai alterar somente o nome dos campos */
               name={"title"}
               onChange={handleInput}
               label={"Titulo do Post"}
               type={"text"}
-              /*  variant={""} */
-
               margin={"normal"}
               fullWidth
               required
               autoFocus
             />
             <TextField
-              /* Valor vindo do input = form estado*/
               value={form.text}
-              /* vem da função handle, onde ele vai alterar somente o nome dos campos */
               name={"text"}
               onChange={handleInput}
               label={"Postar"}
@@ -99,26 +91,26 @@ const FeedPage = () => {
         </form>
       </>
       {/* Criando o loading */}
-      {postFeed.length > 0 ? (
+      {postFeed.posts ? (
         <>
-          {postFeed.map((post) => {
+          {postFeed.posts.map((item) => {
             return (
-              <ContainerPost key={post.id}>
-                <HeaderPost>{post.username}</HeaderPost>
-                {/* Clicando para detalhes do post */}
-                <TextPost onClick={() => goToPosts(history, post.id)}>
+              <ContainerPost key={item.id}>
+                <HeaderPost>{item.username}</HeaderPost>
+                {/* Clicando para page detalhes do post */}
+                <TextPost onClick={() => goToPosts(history, item.id)}>
                   {" "}
-                  {post.text}
+                  {item.text}
                 </TextPost>
 
                 <FooterPost>
                   {" "}
                   <div>
                     <ArrowUpwardSharpIcon size={"small"} />
-                    {post.votesCount}
+                    {item.votesCount}
                     <ArrowDownwardSharpIcon size={"small"} />
                   </div>{" "}
-                  {post.commentsCount} comentários
+                  {item.commentsCount} comentários
                 </FooterPost>
               </ContainerPost>
             );
