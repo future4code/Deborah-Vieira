@@ -26,9 +26,10 @@ export const signUp = (body, history) => {
     .post(`${BASE_URL}/signup`, body)
     .then((response) => {
       console.log(response, "deu certo");
+      //envia token
       localStorage.setItem("token", response.data.token);
       console.log(body, "body");
-      //verificar parte do darvas que direciona o login
+
       goToFeed(history);
     })
     .catch((error) => {

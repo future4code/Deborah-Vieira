@@ -9,7 +9,7 @@ export const ScreenContainer = styled.div`
   form {
     display: flex;
     flex-direction: column;
-    width: 80vw;
+    width: 43vw;
     /* Ele controla o tamanho máximo, para mobile está ok */
     max-width: 450px;
   }
@@ -20,7 +20,7 @@ export const ScreenContainer = styled.div`
 `;
 
 export const SignUpContainer = styled.div`
-  width: 80vw;
+  width: 70vw;
   /* Ele controla o tamanho máximo, para mobile está ok */
   max-width: 450px;
 `;

@@ -5,9 +5,11 @@ import { ScreenContainer, SignUpContainer } from "./styles";
 import LoginForm from "./LoginForm";
 import { useHistory } from "react-router-dom";
 import { goToSignUp } from "../../router/Coordinator";
+import useUnProtectPage from "../../Hooks/useUnProtectPage";
 
 const LoginPage = () => {
   const history = useHistory();
+  useUnProtectPage();
   return (
     <ScreenContainer>
       <Typography variant={"h2"} gutterBottom>

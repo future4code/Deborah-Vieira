@@ -8,7 +8,11 @@ const SignUpForm = () => {
   const history = useHistory;
   /*nesse caso um um estado só recebe dois parametros como objeto dos campos de input ao inves 
   de criar um para cada input*/
-  const [form, handleInput] = useForm({ name: "", email: "", password: "" });
+  const [form, handleInput] = useForm({
+    username: "",
+    email: "",
+    password: "",
+  });
 
   /* Botão que envia os dados a api e loga na aplicação */
   const createLogin = (event) => {
@@ -33,9 +37,9 @@ const SignUpForm = () => {
     <form id={"signup_form"}>
       <TextField
         /* Valor vindo do input = form estado*/
-        value={form.name}
+        value={form.username}
         /* vem da função handle, onde ele vai alterar somente o nome dos campos */
-        name={"name"}
+        name={"username"}
         onChange={handleInput}
         label={"Nome"}
         type={"text"}
