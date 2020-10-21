@@ -10,6 +10,8 @@ const app: Express = express()
 app.use(express.json())
 app.use(cors())
 
+
+
 //requisição Endpoint 1
 app.get("/countries/all", (req:Request, res:Response) => {
     const result = countries.map(country => ({
@@ -35,66 +37,51 @@ app.get("/countries/:id", (req:Request, res:Response) => {
 })
 
 //requisição Endpoint 3
+app.get("/countries/search", (req:Request, res:Response) => {    
+    let result: country[] = countries
+    let errorCode : number = 401
 
-//buscar paises por nome, esse country vem do arquivo que é um array
-/* preciso passar os path paramentros na url depois do search
-http://localhost:3003/countries/search?name=B
-*/
-app.get("/countries/search", (req:Request, res:Response) => {
-    const result: country[] = countries.filter(
-         //garantindo que o req.quer.name é uma string com o as
-         country =>  country.name.includes(req.query.name as string)
-    )
-    res.status(200).send(result)
-})
-
-/*buscar paises por id
-url: http://localhost:3003/countries/78
-*/
-app.get("/countries/:id", (req:Request, res:Response) => {
-    const result: country | undefined = countries.find(
-        country =>  country.id === Number(req.params.id)
-    )
-    res.status(200).send(result)
-})
-
-//DELETE
-app.delete("/countries/:id", (req:Request, res:Response) => {
-   let errorCode : number = 401
     try{
+        if(!req.query.name && !req.query.capital && !req.query.continent )
+            {
+                errorCode = 406
+                throw new Error()
+            }
 
-        if(!req.headers.authorization){
-            throw new Error()
+        if (req.query.name) {
+        result = result.filter(
+            country => country.name.includes(req.query.name as string)
+            )
         }
-
-        const countryIndex : number = countries.findIndex
-        (country => country.id ===Number(req.params.id)
-        )
-
-        if(countryIndex === -1){
-            errorCode = 404
-            throw new Error()
+        
+        if (req.query.capital) {
+        result = result.filter(
+            country => country.capital.includes(req.query.capital as string)
+            )
         }
-        countries.splice(countryIndex, 1)
-        res.status(200).end()
-
+    
+        if (req.query.continent) {
+       result = result.filter(
+          country => country.continent.includes(req.query.continent as string)
+         )
+      }
+      res.status(200).send(result)
     }catch(error){
         res.status(errorCode).end()
-
     }
+
+
 })
 
 
-//testes do slide
-app.get('/test/hello', (req: Request, res: Response) => {
-    res.send(`Olá, mundo!`)
-}) 
 
- app.get('/test/:number/:name', (req: Request, res: Response) => {
-    res.send(
-    `oi ${req.params.name}, Seu número da sorte é ${req.params.number + 3}!
-     `)
-})    
+//requisição Endpoint 3
+app.put("countries/edit/:id", (req:Request, res:Response) => {
+    let result: country[] = countries
+    
+})
+
+
 
 //servidor escutando uma porta, coloco um callback se quiser
 app.listen(3003, () => {
