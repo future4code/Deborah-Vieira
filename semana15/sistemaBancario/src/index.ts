@@ -1,9 +1,8 @@
 //importando express com Request e Response e cors
 import express, {Request, Response} from 'express';
 import cors from 'cors';
-//extra: importando configuração de rede do node
-import { AddressInfo } from "net";
-import { copyFile } from 'fs';
+
+
 //iniciando a aplicação web com express
 const app = express();
 
@@ -75,12 +74,6 @@ app.post("/users", (req: Request, res: Response): void=>{
 
 
 
-const server = app.listen(process.env.PORT || 3003, () => {
-    if (server) {
-       const address = server.address() as AddressInfo;
-       console.log(`Server is running in http://localhost: ${address.port}`);
-    } else {
-       console.error(`Failure upon starting server.`);
-    }
-  });
-  
+app.listen(3003, () => {
+    console.log("Servidor funcionando!")
+})
