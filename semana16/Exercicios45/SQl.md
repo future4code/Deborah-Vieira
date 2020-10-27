@@ -144,3 +144,52 @@ SET synopsis = "Filme velho"
 WHERE id = "002"
 Não vi erro, ele apenas altera 0 linhas, porque o id passado já não
 existe mais na tabela.
+
+# Exercicio 7
+
+### A)
+
+R:SELECT COUNT(\*) FROM Movie WHERE rating > 7.5;
+
+### B)
+
+R: SELECT AVG(rating) FROM Movie;
+
+### C)
+
+R: SELECT COUNT(\*) FROM Movie WHERE playing_limit_date > CURDATE();
+
+### D)
+
+R: SELECT COUNT(\*) FROM Movie WHERE release_date < CURDATE();
+
+### E)
+
+R: SELECT MAX(rating) FROM Movie;
+
+### F)
+
+R: SELECT MIN(rating) FROM Movie;
+
+# Exercicio 8
+
+### A)
+
+R: SELECT \* FROM Movie ORDER BY title;
+
+### B)
+
+R: SELECT \* FROM Movie ORDER BY title LIMIT 5;
+
+### C)
+
+R: SELECT \* FROM Movie
+WHERE release_date < CURDATE()
+ORDER BY release_date DESC
+LIMIT 3;
+
+### D)
+
+R:SELECT \* FROM Movie
+ORDER BY rating DESC
+LIMIT 3;
