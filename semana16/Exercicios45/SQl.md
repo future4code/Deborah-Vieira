@@ -44,6 +44,9 @@ WHERE id = "005"
 
 ### D)Teste, anote e explique o resultado.
 
+0 row(s) affected Rows matched: 0 Changed: 0 Warnings: 0
+Bom, não aparece um erro, mas ele não altera nada
+porque o registro não existe.
 UPDATE Actor
 SET
 name = "Déborah Vieira"
@@ -61,3 +64,21 @@ R: DELETE FROM Actor WHERE name = "Fernanda Montenegro"
 ### B)
 
 DELETE FROM Actor WHERE gender = "male" AND salary > 100000000
+
+# Exercicio 4
+
+### A)
+
+R: SELECT MAX(salary) FROM Actor
+
+### B)
+
+R: SELECT MIN(salary) FROM Actor WHERE gender = "female"
+
+### C)
+
+R: SELECT COUNT(\*) FROM Actor WHERE gender = "female"
+
+### D)
+
+R: SELECT SUM(salary) FROM Actor
