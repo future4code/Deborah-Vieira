@@ -51,3 +51,13 @@ birth_date = "1990-07-14"
 salary = 600000,
 gender = "female"
 WHERE id = "050"
+
+# Exercicio 3
+
+### A)
+
+R: DELETE FROM Actor WHERE name = "Fernanda Montenegro"
+
+### B)
+
+DELETE FROM Actor WHERE gender = "male" AND salary > 100000000
