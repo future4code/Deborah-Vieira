@@ -82,3 +82,33 @@ R: SELECT COUNT(\*) FROM Actor WHERE gender = "female"
 ### D)
 
 R: SELECT SUM(salary) FROM Actor
+
+# Exercicio 5
+
+### A)
+
+SELECT COUNT(\*), gender
+FROM Actor
+GROUP BY gender
+R: Ele conta todos os atores e atrizes e os agrupa por genero.
+
+### B)
+
+R:SELECT id, name FROM Actor ORDER BY name DESC
+
+### C)
+
+R: SELECT name, salary FROM Actor ORDER BY salary
+
+### D)
+
+R: SELECT \* FROM Actor
+ORDER BY salary DESC
+LIMIT 3;
+
+### E)
+
+R:
+SELECT AVG(salary)
+FROM Actor
+GROUP BY gender
