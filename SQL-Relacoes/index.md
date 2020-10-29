@@ -60,3 +60,15 @@ R:DELETE from Actor
 WHERE name = “Tony Ramos”
 Error Code: 1451. Cannot delete or update a parent row: a foreign key constraint fails.
 Não exclui devido a tabela está relacionada.
+
+# Exercicio 3
+
+## A)
+
+R: Busca pelo id e foreign key todos os dados que se relacionam nessas duas tabelas. Ou seja, busque tudo de movie e rating EM(ON) sua relação.
+
+## B)R:
+
+SELECT m.id as iddofilme, r.rate as rating FROM Movie m
+INNER JOIN Rating r ON m.id = r.movie_id;
+Não entendi muito bem isso ainda.
