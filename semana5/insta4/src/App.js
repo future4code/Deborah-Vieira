@@ -100,7 +100,7 @@ class App extends React.Component {
         <div>
           {post.nomeUsuario}
           {post.fotoUsuario}
-          {post.fotoUsuario}
+          {post.fotoPost}
         </div>
       );
     });
