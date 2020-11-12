@@ -1,11 +1,11 @@
 import { connection } from "..";
 //edição de usuário. (?) significa que o parametro é opcional
 
-export default  async function editUserTable(
+export default async function editUserTable(
     id: string,
-    name?:string ,
-    nickname?:string ,
-    email?:string){
+    name? :string ,
+    nickname? :string ,
+    email? :string){
 
         //conexão com o banco e condicionais usando raw para selecionar cada item da tabela
         if(name){
