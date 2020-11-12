@@ -34,10 +34,14 @@ status ENUM ("TO_DO", "DOING", "DONE") DEFAULT "TO_DO",
 FOREIGN KEY (author_id) REFERENCES to_do_list_users(id)
 )
 
-CREATE TABLE to_do_list_assignees (
+CREATE TABLE to_do_list_assignee (
 task_id VARCHAR(64),
 assignee_id VARCHAR(64),
 PRIMARY KEY (task_id, assignee_id),
-FOREIGN KEY (task_id) REFERENCES to_do_list_tasks(id),
-FOREIGN KEY (assignee_id) REFERENCES to_do_list_users(id)
+FOREIGN KEY (task_id) REFERENCES to_do_list_task(id),
+FOREIGN KEY (assignee_id) REFERENCES to_do_list_user(id)
 )
+
+SELECT task.\* , nickname FROM to_do_list_task AS task
+JOIN to_do_list_user AS user
+ON author_id = user.id;

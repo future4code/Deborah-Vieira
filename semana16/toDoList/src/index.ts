@@ -7,6 +7,7 @@ import getUserById from './endpoints/getUserById'
 import editUser from './endpoints/editUser'
 
 import createTask from './endpoints/createTask'
+import getTaskById from './endpoints/getTaskById'
 
 
 
@@ -33,6 +34,7 @@ const app = express()
  app.post('/users/edit/:id', editUser)
 
  app.put('/task', createTask)
+ app.get('/task/:id', getTaskById)
 
 //configuração do servidor
 app.listen(3003, () => {
