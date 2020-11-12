@@ -12,6 +12,7 @@ export default async function getUserById(
             res.status(404).send({
                 message: "Usuário não encontrado!"
             })
+            return
         }
         //validar saida do banco
         /*responder a requisição que vem da variavel user onde

@@ -1,9 +1,12 @@
 import express from 'express'
 import knex from 'knex'
 import dotenv from 'dotenv'
+
 import createUser from './endpoints/createUser'
 import getUserById from './endpoints/getUserById'
 import editUser from './endpoints/editUser'
+
+import createTask from './endpoints/createTask'
 
 
 
@@ -28,6 +31,8 @@ const app = express()
  app.put('/users', createUser)
  app.get('/users/:id', getUserById)
  app.post('/users/edit/:id', editUser)
+
+ app.put('/task', createTask)
 
 //configuração do servidor
 app.listen(3003, () => {

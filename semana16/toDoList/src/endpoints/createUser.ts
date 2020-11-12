@@ -7,12 +7,15 @@ export default async function createUser(
     try {
         //validar a entrada da req
         if(!req.body.name || !req.body.nickname || !req.body.email)
-
-             {
-                 res.status(400).send("Preencha todos os campos")
-
+            {
+                res.status(400).send({
+                    message:"Preencha todos os campos"
+                })
+                //para parar a execução
+                return
             }
 
+            
         //criando id usando o date e os numeros randomicos e passando para string
         const id:string = Date.now() + Math.random().toString()
 

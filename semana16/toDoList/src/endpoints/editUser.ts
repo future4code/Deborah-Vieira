@@ -13,7 +13,9 @@ export default async function editUser(
             req.body.email === ''
             ){
                 res.status(400).send( {
-                       message: 'Nenhum dos campos pode esta em branco.'})
+                       message: 'Nenhum dos campos pode esta em branco.'
+                    })
+                    return
                 }
 
         if(
@@ -22,8 +24,11 @@ export default async function editUser(
             !req.body.email 
             ){
                 res.status(400).send( {
-                       message: 'Escolha um valor para atualizar.'})
+                       message: 'Escolha um valor para atualizar.'
+                    })
+                    return
                 }         
+            
            
         /*consultar o banco, nesse caso ele não me devolve nada 
         não preciso  validar sua saida*/
@@ -37,6 +42,7 @@ export default async function editUser(
         res.status(200).send({
             message: "Usuário atualizado com sucesso!"
         })
+        return
 
         //responder a requisição
     } catch (error) {
