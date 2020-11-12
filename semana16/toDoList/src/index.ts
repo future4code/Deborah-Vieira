@@ -4,6 +4,8 @@ import dotenv from 'dotenv'
 import createUser from './endpoints/createUser'
 import getUserById from './endpoints/getUserById'
 
+import editUserTable from './data/editUserTable'
+
 dotenv.config()
 
 
@@ -24,6 +26,7 @@ const app = express()
 
  app.put('/users', createUser)
  app.get('/users/:id', getUserById)
+ app.post('/users/edit/:id', editUserTable)
 
 //configuração do servidor
 app.listen(3003, () => {

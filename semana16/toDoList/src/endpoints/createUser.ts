@@ -39,6 +39,3 @@ export default async function createUser(
 
 }
 
-terminar de fazer os endpoints e subir para correção
-1:30 amanhã para fazer.
-começar o projeto da semana 
