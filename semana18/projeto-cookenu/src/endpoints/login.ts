@@ -1,6 +1,7 @@
 import {Request, Response} from 'express'
 import insertUser from '../data/signUpTable'
 
+
 export default async function login(
     req:Request, 
     res:Response):Promise<void>{
@@ -31,10 +32,10 @@ export default async function login(
             req.body.email
        )
 
+      //responder a requisição
+      res.status(200).send("Usuário criado com sucesso")
 
-        //validar saida do banco
-        //responder a requisição
-        res.status(200).send("Usuário criado com sucesso")
+        
     } catch (error) {
         res.status(401).send(
         {message: error.message || error.sqlMessage})
