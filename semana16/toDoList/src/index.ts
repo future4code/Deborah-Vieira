@@ -27,7 +27,7 @@ export const connection =  knex({
 
 })
 const app = express()
- app.use(express.json())
+// app.use(express.json())
 
  app.put('/users', createUser)
  app.get('/users/:id', getUserById)
