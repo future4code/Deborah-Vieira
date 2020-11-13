@@ -1,12 +1,13 @@
 import {Request, Response} from 'express'
-import insertUser from '../data/insertUser'
+import insertUser from '../data/signUpTable'
+import generateId from '../services/GeneratorId'
 
-export default async function createUser(
+export default async function signUp(
     req:Request, 
     res:Response):Promise<void>{
     try {
         //validar a entrada da req
-        if(!req.body.name || !req.body.nickname || !req.body.email)
+        if(!req.body.name || !req.body.email  || !req.body.password )
             {
                 res.status(400).send({
                     message:"Preencha todos os campos"
@@ -15,9 +16,17 @@ export default async function createUser(
                 return
             }
 
+            if(req.body.password.length < 6){
+                res.status(400).send({
+                    message:"Senha deve ser maior que 6 caracteres."
+                  
+                })
+                return
+            }
+
             
         //criando id usando o date e os numeros randomicos e passando para string
-        const id:string = Date.now() + Math.random().toString()
+        const id:string = generateId()
 
 
         /*consultar o banco, essas informações serão inseridas no banco,
@@ -27,8 +36,8 @@ export default async function createUser(
        await insertUser(
             id,
             req.body.name,
-            req.body.nickname, 
-            req.body.email
+            req.body.email,
+            req.body.password
        )
 
 

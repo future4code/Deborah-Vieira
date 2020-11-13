@@ -1,15 +1,8 @@
 import express from 'express'
 import knex from 'knex'
 import dotenv from 'dotenv'
-
-import createUser from './endpoints/createUser'
-import getUserById from './endpoints/getUserById'
-import editUser from './endpoints/editUser'
-
-import createTask from './endpoints/createTask'
-import getTaskById from './endpoints/getTaskById'
-
-
+import signUp from './endpoints/signUp'
+import login from './endpoints/login'
 
 dotenv.config()
 
@@ -29,14 +22,14 @@ export const connection =  knex({
 const app = express()
  app.use(express.json())
 
- app.post('/signup', createUser)
- app.post('/login', getUserById)
+ app.post('/signup', signUp)
+ app.post('/login', login)
 
- app.get('/user/profile', editUser)
+ /* app.get('/user/profile', editUser)
  app.get('/user/:id', createTask)
 
  app.post('/recipe', getTaskById)
- app.get('/recipe/:id', createTask)
+ app.get('/recipe/:id', createTask) */
  
 
 //configuração do servidor

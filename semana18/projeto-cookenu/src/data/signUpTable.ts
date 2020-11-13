@@ -1,6 +1,6 @@
 import { connection } from "../index";
 
-export default async function signUp(
+export default async function signUpTable(
     id:string ,
     name:string ,
     email:string,
