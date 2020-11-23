@@ -39,13 +39,12 @@ export default async function signUp(
        )
 
 
-       const token: string = generateToken({
+       const access_token: string = generateToken({
         id
      })
         //validar saida do banco, responder a requisição
          res.status(201).send({
-           message:"Usuário criado com sucesso!",
-           token
+           access_token
         })
     
         //responder a requisição
@@ -57,3 +56,4 @@ export default async function signUp(
 
 }
 
+falta fazer  login e o hash da senha para passar para os outros endpoits.
